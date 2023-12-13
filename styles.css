@@ -1,0 +1,540 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Header */
+
+.header {
+    background-color: #166176;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.mathsaga-logo-section {
+    display: flex;
+    justify-content: flex-start;
+    width: 15%;
+    height: 100%;
+}
+
+#mathsaga-logo-image {
+    width: 70px;
+    align-self: center;
+}
+
+#mathsaga-logo-name {
+    font-size: 10px;
+    font-family: cursive;
+    align-self: flex-end;
+    margin: 0 0 10px -10px;
+    color: #ebdcaf;
+    letter-spacing: 1px;
+}
+
+.search-section {
+    display: flex;
+    width: 20%;
+    height: 30px;
+}
+
+.search-input {
+    height: 100%;
+    width: calc(100% - 80px);
+    padding: 5px 10px;
+    border: #ebdcaf solid 1px;
+    border-right: none;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: transparent;
+    display: block;
+    color: #ebdcaf;
+    font-size: 16px;
+
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-btn {
+    height: 100%;
+    width: 80px;
+    padding: 5px 10px;
+    border: #ebdcaf solid 1px;
+    border-left: none;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #1c2c36;
+    display: block;
+    color: #ebdcaf;
+    line-height: 100%;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #ebdcaf;
+    color: #1c2c36;
+}
+
+.navigation-bar {
+    width: 45%;
+    display: flex;
+}
+
+.navigation-bar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    order: 0;
+}
+
+
+.navigation-bar ul li {
+    list-style: none;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+
+.navigation-bar ul li a {
+    color: #ebdcaf;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.navigation-bar a.active, .navigation-bar a:hover {
+    background-color: #ebdcaf;
+    color: #166176;
+    margin: 0 2px;
+    transition: .5s;
+}
+
+.header .sign-up-section {
+    height: 50px;
+    width: 20%;
+    border-left: #1c2c36 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-btn, .sign-in-btn {
+    display: block;
+    height: 60%;
+    padding: 8px 8px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ebdcaf;
+    color: #166176;
+    border-radius: 3px;
+    border: none;
+    text-transform: uppercase;
+
+}
+
+.sign-up-btn:hover, .sign-in-btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #ebdcaf;
+}
+
+.checkbox-section {
+    order: 1;
+    width: 10%;
+}
+
+.checkbtn {
+    color: #ebdcaf;
+    font-size: 20px;
+    cursor: pointer;
+    width: 10%;
+    order: 1;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* End of Header */
+
+/* Form */
+
+.sign-up-input, .form-sign-up-btn,.sign-in-input, .form-sign-in-btn {
+    display: block;
+    margin: 10px auto 0;
+    width: 180px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #43707d;
+    color: #ebdcaf;
+}
+
+.sign-in-input:focus, .sign-up-input:focus {
+    outline: none;
+}
+
+.sign-in-input::placeholder, .sign-up-input::placeholder {
+    color: #ebdcaf;
+}
+
+.form-sign-in-btn, .form-sign-up-btn {
+    background-color: #166176;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-sign-in-btn:hover, .form-sign-up-btn:hover {
+    cursor: pointer;
+    background-color: #ebdcaf;
+    color: #166176;
+    font-size: 15px;
+}
+
+.form-message, .form-sign-up, .form-sign-in {
+    display: block;
+    margin: 10px auto 0;
+    width: 180px;
+    font-size: 15px;
+    color: #ebdcaf;
+}
+
+.form-sign-in, .form-sign-up {
+    appearance: none;
+    background: none;
+    border: none;
+    display: block;
+    margin-top: 0;
+    margin-left: -43px;
+    text-decoration: underline;
+    color: #ebdcaf;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+.sign-up-form, .sign-in-form {
+    position: fixed;
+    top: 90px;
+    right: 10px;
+    width: 220px;
+    padding: 20px 0;
+    /* background-color: rgba(235,220,175, 0.6); */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+}
+
+#sign-up-form, #sign-in-form {
+   display: none;
+}
+
+/* End of Form */
+
+/* Page intro */
+
+.page-intro {
+    background-image: url("images/ztnqiczdnomoubyfvrkcqfmhuvzneauv.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 340px;
+    padding: 20px;
+}
+
+.page-intro p {
+    background-color: rgba(235,220,175, 0.5);
+    font-size: 14px;
+    color: #1c2c36;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px white;
+    width: 95%;
+    max-width: 600px;
+    text-align: left;
+    margin: 0 auto 5px 20px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.page-intro .join-btn {
+    padding: 6px 18px;
+    margin: 0px auto 20px 20px;
+    background-color: #166176;
+    color: #ebdcaf;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.page-intro .join-btn:hover {
+    font-weight: bold;
+    color: #166176;
+    background-color: rgba(235,220,175, 0.5);
+}
+
+/* End of Page Intro */
+
+/* Main */
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    gap: 10px;
+    width: 100%;
+    background-color: #43707d;
+    font-size: 13px;
+
+}
+
+.recent-post {
+    width: 55%;
+    background-color: rgba(235,220,175, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.recent-post > h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.recent-post-image {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.post-date {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #166176;
+    font-style: italic;
+}
+
+.previous-posts-container {
+    width: 43%;
+    background-color: rgba(235,220,175, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-posts-containers {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+
+.previous-post {
+    width: 48%;
+    background-color: rgba(235,220,175, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 20px;
+    box-shadow: 0px 0px 15px 5px #166176;
+}
+
+.previous-post-image-container {
+    width: 100%;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.previous-post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.previous-post > h3 {
+    margin: 20px 0px 5px;
+}
+
+/* End of Main */
+
+/* Start of Footer */
+
+.footer {
+    background-image: url("images/mathsaga-logo-withbackground.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 360px;
+    padding: 20px;
+    color: #ebdcaf;
+}
+
+.footer h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer ul li {
+    list-style: none;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 20px;
+}
+
+.footer ul li a {
+    color: #ebdcaf;
+}
+
+.footer ul li a:hover {
+    font-weight: bold;
+}
+
+
+.footer .pages-links, .download-app-links, .social-media-links {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px #ebdcaf;
+
+}
+
+/* End of Footer */
+
+@media (max-width: 920px) {
+
+    .header {
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .navigation-bar ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: 50vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 15px;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all .5s;
+    }
+
+    .navigation-bar ul li a {
+        font-size: 18px;
+        font-weight: lighter;
+        color: #ebdcaf;
+    }
+
+    .navigation-bar a.active, .navigation-bar a:hover {
+        background-color: transparent;
+        color: #ebdcaf;
+        font-weight: bold;
+        transition: .5s;
+    }
+
+    .checkbtn {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .mathsaga-logo-section {
+        width: 20%;
+    }
+
+    .search-section {
+        width: 45%;
+    }
+
+    .navigation-bar {
+        width: 5%;
+    }
+
+    .header .sign-up-section {
+        width: 30%;
+    }
+    
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .page-intro {
+        height: 70vh;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recent-post {
+        width: 96%;
+
+    }
+
+    .previous-posts-container {
+        width: 96%;
+    }
+    
+}
+
+@media (max-width: 620px) {
+    .mathsaga-logo-section {
+        width: 23%;
+    }
+
+    .search-section {
+        width: 35%;
+    }
+
+    .navigation-bar {
+        width: 5%;
+    }
+
+    .sign-up-section {
+        width: 37%;
+    }
+
+    .sign-up-btn, .sign-in-btn {
+        font-size: 12px;
+    }
+
+    .checkbtn {
+        margin-left: 4px;
+    }
+}
