@@ -518,6 +518,18 @@ body {
         width: 23%;
     }
 
+    #mathsaga-logo-image {
+        width: 50px;
+    }
+
+    #mathsaga-logo-name {
+        font-size: 9px;
+    }
+
+    .footer h3 {
+        font-size: 16px;
+    }
+
     .search-section {
         width: 35%;
     }
@@ -531,7 +543,7 @@ body {
     }
 
     .sign-up-btn, .sign-in-btn {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .checkbtn {
